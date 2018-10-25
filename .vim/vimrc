@@ -1,0 +1,8 @@
+" Github
+source ~/dotfiles/vim-dotfiles/plugin.vim
+source ~/dotfiles/vim-dotfiles/basic.vim
+source ~/dotfiles/vim-dotfiles/indent.vim
+" Dropbox
+"source ~/Dropbox/Share/dotfiles/vim-dotfiles/plugin.vim
+"source ~/Dropbox/Share/dotfiles/vim-dotfiles/basic.vim
+"source ~/Dropbox/Share/dotfiles/vim-dotfiles/indent.vim
