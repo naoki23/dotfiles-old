@@ -28,8 +28,9 @@ case ${OSTYPE} in
         alias ls='ls -G'
         ;;
 esac
+alias la='ls -Ah'
 alias ll='ls -lh'
-alias la='ls -lAh'
+alias lla='ls -lAh'
 alias rails='bundle exec rails'
 
 subl(){
