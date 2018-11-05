@@ -20,8 +20,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'joshdick/onedark.vim'
 Plugin 'itchyny/vim-parenmatch'
-Plugin 'kana/vim-smartinput'
-Plugin 'tpope/vim-endwise'
+" Plugin 'kana/vim-smartinput'
+" Plugin 'tpope/vim-endwise'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale' " more vim version 8
 " Plugin 'vim-syntastic/syntastic' " if vim version is old
@@ -29,7 +29,6 @@ Plugin 'w0rp/ale' " more vim version 8
 " Ruby
 
 " Python
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -156,3 +155,4 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 syntax on
 autocmd ColorScheme * highlight LineNr ctermfg=153
 colorscheme onedark
+

@@ -15,7 +15,6 @@ set softtabstop=0       "キーボードから入るタブの数
 "------------------------------------------------------------------------------
 " 隣接した{}で改行したらインデント
 "------------------------------------------------------------------------------
-
 function! IndentBraces()
     let nowletter = getline(".")[col(".")-1]    " 今いるカーソルの文字
     let beforeletter = getline(".")[col(".")-2] " 1つ前の文字
@@ -29,10 +28,10 @@ function! IndentBraces()
 endfunction
 " Enterに割り当て
 inoremap <silent> <expr> <CR> IndentBraces()
-"------------------------------------------------------------------------------
-" 言語別のインデントの設定
-"------------------------------------------------------------------------------
 
+"------------------------------------------------------------------------------
+" 言語別タブ幅
+"------------------------------------------------------------------------------
 if has("autocmd")
     "ファイルタイプの検索を有効にする
     filetype plugin on
@@ -53,4 +52,11 @@ if has("autocmd")
     autocmd FileType sass        setlocal sw=4 sts=4 ts=4 et
     autocmd FileType javascript  setlocal sw=4 sts=4 ts=4 et
     autocmd FileType vim         setlocal sw=4 sts=4 ts=4 et
+    autocmd FileType asm         setlocal sw=4 sts=4 ts=4 et
+    autocmd FileType make        setlocal sw=4 sts=4 ts=4 et
 endif
+
+"------------------------------------------------------------------------------
+" Python
+"------------------------------------------------------------------------------
+"autocmd FileType python inoremap 

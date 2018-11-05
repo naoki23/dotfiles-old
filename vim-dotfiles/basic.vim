@@ -16,8 +16,6 @@ elseif OSTYPE == "Darwin\n"
     set clipboard=unnamed
 endif
 
-
-
 " Letter code -----------------------------------------------------------------
 
 set fileencoding=utf-8
@@ -58,6 +56,14 @@ nnoremap : ;
 nnoremap <Space>v <C-v>
 noremap <C-v> <Nop>
 inoremap <silent> jj <ESC>
+inoremap [ []<left>
+inoremap ] <right>
+inoremap { {}<left>
+inoremap } <right>
+inoremap ( ()<left>
+inoremap ) <right>
+inoremap < <><left>
+inoremap > <right>
 let mapleader = "\<Space>"
 
 " Serach ----------------------------------------------------------------------
