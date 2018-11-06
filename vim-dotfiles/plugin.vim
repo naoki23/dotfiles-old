@@ -25,6 +25,7 @@ Plugin 'itchyny/vim-parenmatch'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale' " more vim version 8
 " Plugin 'vim-syntastic/syntastic' " if vim version is old
+Plugin 'itchyny/lightline.vim'
 
 " Ruby
 
@@ -156,3 +157,6 @@ syntax on
 autocmd ColorScheme * highlight LineNr ctermfg=153
 colorscheme onedark
 
+"------------------------------------------------------------------------------
+" lightline.vim
+"------------------------------------------------------------------------------
