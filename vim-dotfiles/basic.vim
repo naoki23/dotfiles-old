@@ -62,8 +62,8 @@ inoremap { {}<left>
 inoremap } <right>
 inoremap ( ()<left>
 inoremap ) <right>
-inoremap < <><left>
-inoremap > <right>
+inoremap ' ''<left>
+inoremap " ""<left>
 let mapleader = "\<Space>"
 
 " Serach ----------------------------------------------------------------------
