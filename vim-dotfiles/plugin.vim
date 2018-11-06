@@ -19,6 +19,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'itchyny/vim-parenmatch'
 " Plugin 'kana/vim-smartinput'
 " Plugin 'tpope/vim-endwise'
@@ -160,3 +161,20 @@ colorscheme onedark
 "------------------------------------------------------------------------------
 " lightline.vim
 "------------------------------------------------------------------------------
+let g:lightline = {
+            \ 'active': {
+            \ 'left': [ ['mode', 'paste'],
+            \           ['readonly', 'filepath', 'modified'] ]
+            \ },
+            \ 'component_function':{
+            \ 'filepath': 'FilePath'
+            \ }
+            \ }
+
+function! FilePath()
+    if winwidth(0) > 83
+        return expand("%:s")
+    else
+        return expand("%:t")
+    endif
+endfunction
