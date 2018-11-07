@@ -1,3 +1,5 @@
 .vim/bundle/
 .vim/undo/
 .directory
+.DS_Store
+
