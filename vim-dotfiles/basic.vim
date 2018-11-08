@@ -41,8 +41,39 @@ set scrolloff=2
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
-" ステータスライン
-set statusline=\ %<%F\ %m%r%h%w%=\ %n\ \|\ %Y\ \|\ %{&fileencoding}\ \|\ %P\ \ 
+" Statusline -----------------------------------------------------------------
+
+function! Statusline_mode_name()
+    if mode() =~ 'n'
+        let mode_name = "Normal"
+        let c = 1
+    elseif mode() =~ "i"
+        let mode_name = "Insert"
+        let c = 2
+    elseif mode() =~ "R"
+        let mode_name = "Replace"
+        let c = 3
+    else
+        let mode_name = "Visual"
+        let c = 4
+    endif
+    return '%'. c .'* '. mode_name .' %* %<%f %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %* '
+endfunction
+
+hi User1 gui=bold guibg=#afdf00 guifg=#000000
+hi User2 gui=bold guibg=#61afef guifg=#000000
+hi User3 gui=bold guibg=#e06c75 guifg=#000000
+hi User4 gui=bold guibg=#eea9bf guifg=#000000
+hi User5 gui=bold guibg=#262626 guifg=#ffffff
+hi User5 gui=bold guibg=#abb2bf guifg=#E7E8E2
+hi User6 gui=bold guibg=#E7E8E2 guifg=#4C4C4C
+
+" 左
+"set statusline=%!Statusline_mode_name()\ %<%F\ %m%r%h%w%=
+" 右
+"set statusline+=\ %n\ \|\ %{&fileformat}\ \|\ %{&filetype}\ \|\ %{&fileencoding}\ \|\ %P\' 
+
+set statusline=%!Statusline_mode_name()
 set laststatus=2
 
 " Key mapping -----------------------------------------------------------------

@@ -26,7 +26,7 @@ Plugin 'itchyny/vim-parenmatch'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale' " more vim version 8
 " Plugin 'vim-syntastic/syntastic' " if vim version is old
-Plugin 'itchyny/lightline.vim'
+" Plugin 'itchyny/lightline.vim'
 
 " Ruby
 
@@ -174,24 +174,3 @@ endif
 syntax on
 autocmd ColorScheme * highlight LineNr ctermfg=153
 colorscheme onedark
-
-"------------------------------------------------------------------------------
-" lightline.vim
-"------------------------------------------------------------------------------
-let g:lightline = {
-            \ 'active': {
-            \ 'left': [ ['mode', 'paste'],
-            \           ['readonly', 'filepath', 'modified'] ]
-            \ },
-            \ 'component_function':{
-            \ 'filepath': 'FilePath'
-            \ }
-            \ }
-
-function! FilePath()
-    if winwidth(0) > 83
-        return expand("%:s")
-    else
-        return expand("%:t")
-    endif
-endfunction
