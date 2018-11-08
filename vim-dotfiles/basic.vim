@@ -1,4 +1,3 @@
-
 " Basic setting ---------------------------------------------------------------
 
 set fenc=utf-8
@@ -13,7 +12,7 @@ let OSTYPE = system('uname')
 if OSTYPE == "Linux\n"
     set clipboard=unnamedplus
 elseif OSTYPE == "Darwin\n"
-    set clipboard=unnamed
+    set clipboard=unnamed 
 endif
 
 " Letter code -----------------------------------------------------------------
@@ -43,37 +42,39 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 " Statusline -----------------------------------------------------------------
 
-function! Statusline_mode_name()
+function! Statusline()
     if mode() =~ 'n'
         let mode_name = "Normal"
-        let c = 1
+        let color_num = 1
     elseif mode() =~ "i"
         let mode_name = "Insert"
-        let c = 2
+        let color_num = 2
     elseif mode() =~ "R"
         let mode_name = "Replace"
-        let c = 3
+        let color_num = 3
     else
         let mode_name = "Visual"
-        let c = 4
+        let color_num = 4
     endif
-    return '%'. c .'* '. mode_name .' %* %<%f %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %* '
+
+    if winwidth(0) >= 100
+        let win_width = 'F'
+    else
+        let win_width = 't'
+    endif
+
+    return '%'.color_num.'* '.mode_name.' %*%5* %'.win_width.' %* %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %*%7* %c/%l %*'
 endfunction
 
 hi User1 gui=bold guibg=#afdf00 guifg=#000000
-hi User2 gui=bold guibg=#61afef guifg=#000000
+hi User2 gui=bold guibg=#61afef guifg=#ffffff
 hi User3 gui=bold guibg=#e06c75 guifg=#000000
 hi User4 gui=bold guibg=#eea9bf guifg=#000000
-hi User5 gui=bold guibg=#262626 guifg=#ffffff
-hi User5 gui=bold guibg=#abb2bf guifg=#E7E8E2
-hi User6 gui=bold guibg=#E7E8E2 guifg=#4C4C4C
+hi User5 gui=bold guibg=#4C4C4C guifg=#E7E8E2
+hi User6 gui=bold guibg=#4C4C4C guifg=#E7E8E2
+hi User7 gui=bold guibg=#E7E8E2 guifg=#4C4C4C
 
-" 左
-"set statusline=%!Statusline_mode_name()\ %<%F\ %m%r%h%w%=
-" 右
-"set statusline+=\ %n\ \|\ %{&fileformat}\ \|\ %{&filetype}\ \|\ %{&fileencoding}\ \|\ %P\' 
-
-set statusline=%!Statusline_mode_name()
+set statusline=%!Statusline()
 set laststatus=2
 
 " Key mapping -----------------------------------------------------------------
