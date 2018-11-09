@@ -58,12 +58,12 @@ function! Statusline()
     endif
 
     if winwidth(0) >= 100
-        let win_width = 'F'
+        let file_type = 'F'
     else
-        let win_width = 't'
+        let file_type = 't'
     endif
 
-    return '%'.color_num.'*  '.mode_name.'  %*%5*  %<%'.win_width.'  %* %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %*%7*  %c/%l  %*'
+    return '%'.color_num.'*  '.mode_name.'  %*%5*  %<%'.file_type.'  %* %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %*%7*  %c/%l  %*'
 endfunction
 
 hi User1 gui=bold guibg=#afdf00 guifg=#000000
