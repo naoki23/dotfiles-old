@@ -36,9 +36,9 @@ set wildmode=list:longest
 set linespace=4
 set scrolloff=2
 
-" 空白とかを視覚化
+" Visualize invisible character
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 
 " Statusline -----------------------------------------------------------------
 
@@ -63,7 +63,7 @@ function! Statusline()
         let win_width = 't'
     endif
 
-    return '%'.color_num.'* '.mode_name.' %*%5* %'.win_width.' %* %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %*%7* %c/%l %*'
+    return '%'.color_num.'*  '.mode_name.'  %*%5*  %<%'.win_width.'  %* %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %*%7*  %c/%l  %*'
 endfunction
 
 hi User1 gui=bold guibg=#afdf00 guifg=#000000

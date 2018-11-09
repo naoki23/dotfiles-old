@@ -1,44 +1,42 @@
 "------------------------------------------------------------------------------
 " Tab
 "------------------------------------------------------------------------------
-set list listchars=tab:\▸\-
-set autoindent          "改行時に前の行のインデントを計測
-set smartindent         "改行時に入力された行の末尾に合わせて次の行のインデントを増減する 
-set cindent             "Cプログラムファイルの自動インデントを始める
-set smarttab            "新しい行を作った時に高度な自動インデントを行う
-set expandtab           "タブ入力を複数の空白に置き換える 
+set autoindent          
+set smartindent         
+set cindent             
+set smarttab            
+set expandtab           
 
-set tabstop=2           "タブを含むファイルを開いた際, タブを何文字の空白に変換するか
-set shiftwidth=2        "自動インデントで入る空白数
-set softtabstop=0       "キーボードから入るタブの数
+set tabstop=2           
+set shiftwidth=2        
+set softtabstop=0       
 set breakindent
 
 "------------------------------------------------------------------------------
-" 隣接した{}で改行したらインデント
+" Indent when break in adjacent {}
 "------------------------------------------------------------------------------
 function! IndentBraces()
-    let nowletter = getline(".")[col(".")-1]    " 今いるカーソルの文字
-    let beforeletter = getline(".")[col(".")-2] " 1つ前の文字
+    let nowletter = getline(".")[col(".")-1]    " The Char of the cursor which is now
+    let beforeletter = getline(".")[col(".")-2] " Previous char
 
-    " カーソルの位置の括弧が隣接している場合
     if nowletter == "}" && beforeletter == "{"
         return "\n\t\n\<UP>\<RIGHT>\<RIGHT>\<RIGHT>\<RIGHT>"
     else
         return "\n"
     endif
 endfunction
-" Enterに割り当て
+" Map Enter
 inoremap <silent> <expr> <CR> IndentBraces()
 
 "------------------------------------------------------------------------------
-" 言語別タブ幅
+" Tab width by language
 "------------------------------------------------------------------------------
 if has("autocmd")
-    "ファイルタイプの検索を有効にする
+    "Enable to search file type
     filetype plugin on
-    "ファイルタイプに合わせたインデントを利用
+    "Enable indent depending on file type
     filetype indent on
-    "sw=softtabstop, sts=shiftwidth, ts=tabstop, et=expandtabの略
+    "sw=softtabstop, sts=shiftwidth, ts=tabstop, et=expandtab
     autocmd FileType c           setlocal sw=4 sts=4 ts=4 et
     autocmd FileType cpp         setlocal sw=4 sts=4 ts=4 et
     autocmd FileType html        setlocal sw=2 sts=2 ts=2 et

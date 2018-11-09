@@ -10,7 +10,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" 以下に記載
+" write below
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/Unite.vim'
 Plugin 'Shougo/neosnippet'
@@ -18,15 +18,10 @@ Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-" "Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'itchyny/vim-parenmatch'
-" Plugin 'kana/vim-smartinput'
-" Plugin 'tpope/vim-endwise'
 Plugin 'ap/vim-css-color'
-Plugin 'w0rp/ale' " more vim version 8
-" Plugin 'vim-syntastic/syntastic' " if vim version is old
-" Plugin 'itchyny/lightline.vim'
+Plugin 'w0rp/ale'
 
 " Ruby
 
@@ -46,32 +41,9 @@ filetype plugin indent on    " required
 
 
 "------------------------------------------------------------------------------
-" Syntactic
-"------------------------------------------------------------------------------
-
-" 構文エラー行に「>>」を表示
-let g:syntastic_enable_signs = 1
-" 他のVimプラグインと競合するのを防ぐ
-let g:syntastic_always_populate_loc_list = 1
-" 構文エラーリストを非表示
-let g:syntastic_auto_loc_list = 0
-" ファイルを開いた時に構文エラーチェックを実行する
-let g:syntastic_check_on_open = 1
-" 「:wq」で終了する時も構文エラーチェックする
-let g:syntastic_check_on_wq = 1
-
-" Javascript用. 構文エラーチェックにESLintを使用
-let g:syntastic_javascript_checkers=['eslint']
-" Javascript以外は構文エラーチェックをしない
-let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': ['javascript'],
-            \ 'passive_filetypes': [] }
-
-"------------------------------------------------------------------------------
 " NERDTree
 "------------------------------------------------------------------------------
 
-" 隠しファイルをデフォルトで表示
 let NERDTreeShowHidden = 1
 ""autocmd vimenter * NERDTree
 
