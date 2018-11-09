@@ -1,0 +1,27 @@
+[submodule ".vim/pack/packages/start/Unite.vim"]
+	path = .vim/pack/packages/start/Unite.vim
+	url = https://github.com/Shougo/unite.vim
+[submodule ".vim/pack/packages/start/ale"]
+	path = .vim/pack/packages/start/ale
+	url = https://github.com/w0rp/ale
+[submodule ".vim/pack/packages/start/indentLine"]
+	path = .vim/pack/packages/start/indentLine
+	url = https://github.com/Yggdroot/indentLine
+[submodule ".vim/pack/packages/start/neocomplete"]
+	path = .vim/pack/packages/start/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim
+[submodule ".vim/pack/packages/start/nerdcommenter"]
+	path = .vim/pack/packages/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule ".vim/pack/packages/start/nerdtree"]
+	path = .vim/pack/packages/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/pack/packages/start/vim-css-color"]
+	path = .vim/pack/packages/start/vim-css-color
+	url = https://github.com/ap/vim-css-color
+[submodule ".vim/pack/packages/start/vim-parenmatch"]
+	path = .vim/pack/packages/start/vim-parenmatch
+	url = https://github.com/itchyny/vim-parenmatch
+[submodule ".vim/pack/packages/start/vim-polyglot"]
+	path = .vim/pack/packages/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
