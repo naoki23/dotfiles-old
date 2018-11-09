@@ -12,7 +12,7 @@ let OSTYPE = system('uname')
 if OSTYPE == "Linux\n"
     set clipboard=unnamedplus
 elseif OSTYPE == "Darwin\n"
-    set clipboard=unnamed 
+    set clipboard=unnamed
 endif
 
 " Letter code -----------------------------------------------------------------
@@ -25,20 +25,13 @@ set ambiwidth=double
 " Appearance ------------------------------------------------------------------
 
 set number
-" set cursorline
-" hi clear Cursorline
 set colorcolumn=80
-" execute "set colorcolumn=" . join(range(80, 9999), ',')
 set virtualedit=onemore
 set visualbell
 set showmatch
 set wildmode=list:longest
 set linespace=4
 set scrolloff=2
-
-" Visualize invisible character
-set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 
 " Statusline -----------------------------------------------------------------
 
@@ -66,6 +59,9 @@ function! Statusline()
     return '%'.color_num.'*  '.mode_name.'  %*%5*  %<%'.file_type.'  %* %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %*%7*  %c/%l  %*'
 endfunction
 
+set statusline=%!Statusline()
+set laststatus=2
+
 hi User1 gui=bold guibg=#afdf00 guifg=#000000
 hi User2 gui=bold guibg=#61afef guifg=#ffffff
 hi User3 gui=bold guibg=#e06c75 guifg=#000000
@@ -73,9 +69,6 @@ hi User4 gui=bold guibg=#eea9bf guifg=#000000
 hi User5 gui=bold guibg=#4C4C4C guifg=#E7E8E2
 hi User6 gui=bold guibg=#4C4C4C guifg=#E7E8E2
 hi User7 gui=bold guibg=#E7E8E2 guifg=#4C4C4C
-
-set statusline=%!Statusline()
-set laststatus=2
 
 " Key mapping -----------------------------------------------------------------
 

@@ -33,14 +33,6 @@ alias ll='ls -lh'
 alias lla='ls -lAh'
 alias rails='bundle exec rails'
 
-subl(){
-    if [ $# -ge 1 ] ; then
-        subli -b $@
-    else
-        subli & exit
-    fi
-}
-
 # プロンプト ------------------------------------------------------------------
 
 # 左
