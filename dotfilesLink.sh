@@ -14,6 +14,6 @@ ln -fs ~/dotfiles/.zprofile ~/.zprofile
 ln -fs ~/dotfiles/.zshrc ~/.zshrc
 ln -fs ~/dotfiles/.zshenv ~/.zshenv
 
-if [ ! -e ~/Dropbox/dotfiles/.vim/bundle/Vundle.vim/ ]; then
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
+#if [ ! -e ~/Dropbox/dotfiles/.vim/bundle/Vundle.vim/ ]; then
+  #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#fi
