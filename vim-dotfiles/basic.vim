@@ -33,16 +33,23 @@ set wildmode=list:longest
 set linespace=4
 set scrolloff=2
 
+" invisible letter
+set list
+set listchars=tab:»-,trail:-,nbsp:%
+hi ZenkakuSpace term=underline ctermbg=10 guibg=#ff9900
+match ZenkakuSpace /　/
+hi SpecialKey guifg=#ff9900
+
 " Statusline -----------------------------------------------------------------
 
 function! Statusline()
-    if mode() =~ 'n'
+    if mode() == 'n'
         let mode_name = "Normal"
         let color_num = 1
-    elseif mode() =~ "i"
+    elseif mode() == "i"
         let mode_name = "Insert"
         let color_num = 2
-    elseif mode() =~ "R"
+    elseif mode() == "R"
         let mode_name = "Replace"
         let color_num = 3
     else
