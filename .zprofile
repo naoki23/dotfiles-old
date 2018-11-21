@@ -30,5 +30,6 @@ case ${OSTYPE} in
     darwin*)
         # openssl
         export LDFLAGS="-L/usr/local/opt/openssl/lib"
+        export PATH=/Users/shimataninaoki/.nimble/bin:$PATH
         ;;
 esac

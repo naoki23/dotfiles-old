@@ -64,6 +64,7 @@ function! Statusline()
     endif
 
     return '%'.color_num.'*  '.mode_name.'  %*%5*  %<%'.file_type.'  %* %m%r%h%w%= %n | %{&fileformat} | %{&filetype} | %{&fileencoding} %6* %P %*%7*  %c/%l  %*'
+
 endfunction
 
 set statusline=%!Statusline()
@@ -88,14 +89,14 @@ nnoremap : ;
 nnoremap <Space>v <C-v>
 noremap <C-v> <Nop>
 inoremap <silent> jj <ESC>
-inoremap [ []<left>
-inoremap ] <right>
-inoremap { {}<left>
-inoremap } <right>
-inoremap ( ()<left>
-inoremap ) <right>
-inoremap ' ''<left>
-inoremap " ""<left>
+"inoremap [ []<left>
+"inoremap ] <right>
+"inoremap { {}<left>
+"inoremap } <right>
+"inoremap ( ()<left>
+"inoremap ) <right>
+"inoremap ' ''<left>
+"inoremap " ""<left>
 let mapleader = "\<Space>"
 
 " Serach ----------------------------------------------------------------------
