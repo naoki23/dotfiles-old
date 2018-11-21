@@ -106,3 +106,10 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+"-----------------------------------------------------------------------------
+" Lightline.vim
+"-----------------------------------------------------------------------------
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+
