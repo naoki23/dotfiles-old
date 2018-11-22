@@ -32,6 +32,7 @@ alias la='ls -Ah'
 alias ll='ls -lh'
 alias lla='ls -lAh'
 alias rails='bundle exec rails'
+alias be='bundle exec'
 
 # プロンプト ------------------------------------------------------------------
 

@@ -31,5 +31,6 @@ case ${OSTYPE} in
         # openssl
         export LDFLAGS="-L/usr/local/opt/openssl/lib"
         export PATH=/Users/shimataninaoki/.nimble/bin:$PATH
+        export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
         ;;
 esac
