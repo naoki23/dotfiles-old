@@ -21,3 +21,5 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

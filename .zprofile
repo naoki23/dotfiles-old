@@ -34,3 +34,5 @@ case ${OSTYPE} in
         export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
         ;;
 esac
+
+export PATH="$HOME/.cargo/bin:$PATH"
