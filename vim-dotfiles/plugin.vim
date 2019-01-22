@@ -22,6 +22,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'itchyny/vim-parenmatch'
 Plugin 'ap/vim-css-color'
 Plugin 'w0rp/ale'
+Plugin 'cohama/lexima.vim'
 
 " Ruby
 
