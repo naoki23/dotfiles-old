@@ -29,8 +29,7 @@ case ${OSTYPE} in
         ;;
 esac
 alias la='ls -Ah'
-alias ll='ls -lh'
-alias lla='ls -lAh'
+alias ll='ls -lAh'
 alias rails='bundle exec rails'
 alias be='bundle exec'
 
@@ -69,3 +68,4 @@ man() {
                 man "$@"
 }
 
+export HOMEBREW_GITHUB_API_TOKEN=your_token_here
