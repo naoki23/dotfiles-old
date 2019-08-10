@@ -1,6 +1,8 @@
 " Basic setting ---------------------------------------------------------------
 
-set fenc=utf-8
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
 set nobackup
 set noswapfile
 set autoread
@@ -98,6 +100,7 @@ inoremap <silent> jj <ESC>
 "inoremap ' ''<left>
 "inoremap " ""<left>
 let mapleader = "\<Space>"
+let g:user_emmet_leader_key='<space>' " Emmet-vim でトリガーをspaceに
 
 " Serach ----------------------------------------------------------------------
 
