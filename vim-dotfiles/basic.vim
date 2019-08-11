@@ -89,8 +89,8 @@ nnoremap <Space>n :NERDTreeToggle<CR>
 nnoremap ; :
 nnoremap : ;
 nnoremap <Space>v <C-v>
-noremap <C-v> <Nop>
-inoremap <silent> jj <ESC>
+nnoremap <C-v> <Nop>
+inoremap <silent>jj <ESC>
 "inoremap [ []<left>
 "inoremap ] <right>
 "inoremap { {}<left>
@@ -99,8 +99,10 @@ inoremap <silent> jj <ESC>
 "inoremap ) <right>
 "inoremap ' ''<left>
 "inoremap " ""<left>
-let mapleader = "\<Space>"
-let g:user_emmet_leader_key='<space>' " Emmet-vim でトリガーをspaceに
+if mode() == 'n'
+    let mapleader = "\<Space>"
+endif
+"let g:user_emmet_leader_key='<space>' " Emmet-vim でトリガーをspaceに
 
 " Serach ----------------------------------------------------------------------
 
