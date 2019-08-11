@@ -101,8 +101,8 @@ inoremap <silent>jj <ESC>
 "inoremap " ""<left>
 if mode() == 'n'
     let mapleader = "\<Space>"
+    let g:user_emmet_leader_key='<c-e>' " Emmet-vim でトリガーをctrl + eに
 endif
-"let g:user_emmet_leader_key='<space>' " Emmet-vim でトリガーをspaceに
 
 " Serach ----------------------------------------------------------------------
 
