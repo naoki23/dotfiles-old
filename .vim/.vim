@@ -1,0 +1,1 @@
+/Users/shimataninaoki/dotfiles/.vim
